@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 class DefaultPresenter extends Nette\Application\UI\Presenter
 {
+
+	public function actionDefault() {
+		$this->template->test = "test";
+	}
+
 	public function renderDefault()
 	{
 		$this->redrawControl('round');
@@ -27,5 +32,10 @@ class DefaultPresenter extends Nette\Application\UI\Presenter
 	{
 		$this->template->flash = 'Congratulations!';
 		$this->redrawControl('flash');
+	}
+
+	public function handleTest() {
+		$this->template->test = "hovno";
+		$this->redrawControl("test");
 	}
 }

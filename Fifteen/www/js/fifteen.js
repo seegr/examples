@@ -43,4 +43,11 @@ jQuery(function($) {
 		});
 	});
 
+	/** test **/
+	$("h1").click(function() {
+		$.ajax({
+			url: $(this).data("href")
+		});
+	});
+
 });
